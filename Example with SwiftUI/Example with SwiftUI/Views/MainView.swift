@@ -12,43 +12,37 @@ struct MainView: View {
 
     var body: some View {
         NavigationView {
+            List {
+                Image("Background")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxHeight: 200)
+                    .cornerRadius(10)
+                    .padding(.vertical, 20)
 
-                ScrollView {
-                    VStack(alignment: .center, spacing: 20) {
-                        Image("Background")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(maxHeight: 200)
-                            .cornerRadius(10)
+                Text(viewModel.currentText)
+                    .font(.system(size: viewModel.fontSize))
+                    .onAppear {
+                        viewModel.pickRandomCurrentText()
+                    }
+                    .padding(.vertical, 20)
 
-                        Text(viewModel.currentText)
-                            .font(.system(size: viewModel.fontSize))
-                            .onAppear {
-                                viewModel.pickRandomCurrentText()
-                            }
+                HStack {
+                    SimpleButton(label: "Større tekst") {
+                        viewModel.increaseFontSize()
+                    }
 
-                        Divider()
+                    Spacer()
 
-                        HStack {
-                            SimpleButton(label: "Større tekst") {
-                                viewModel.increaseFontSize()
-                            }
-
-                            Spacer()
-
-                            SimpleButton(label: "Bytt ut text") {
-                                viewModel.pickRandomCurrentText()
-                            }
-                        }
-
-                        Divider()
-
-                        Spacer()
-                    }.padding(20)
-
+                    SimpleButton(label: "Bytt ut text") {
+                        viewModel.pickRandomCurrentText()
+                    }
+                }
+                .padding(.vertical, 20)
             }
+            .padding(.vertical, 20)
+            .navigationBarTitleDisplayMode(.large)
             .navigationBarTitle("Demo")
-
         }
     }
 }
