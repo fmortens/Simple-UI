@@ -30,20 +30,17 @@ struct ContentView: View {
         NavigationView {
 
                 ScrollView {
-                    VStack(alignment: .center, spacing: 10) {
+                    VStack(alignment: .center, spacing: 20) {
                         Image("Background")
                             .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(maxHeight: 200)
                             .cornerRadius(10)
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 20)
 
                         Text(viewModel.currentText)
                             .onAppear {
                                 viewModel.pickRandomCurrentText()
                             }
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 20)
 
                         Divider()
 
@@ -68,13 +65,11 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                         }
-                        .padding(.vertical, 10)
-                        .padding(.horizontal, 20)
 
                         Divider()
 
                         Spacer()
-                    }
+                    }.padding(20)
 
             }
             .navigationBarTitle("Demo")
@@ -85,6 +80,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+        }
+
     }
 }
