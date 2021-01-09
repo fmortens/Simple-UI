@@ -64,9 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				DEEADF4B25A9F5890029C386 /* Example_with_SwiftUIApp.swift */,
-				DE24E57B25AA10D9000D9808 /* Views */,
 				DEEADF4F25A9F5890029C386 /* Assets.xcassets */,
 				DEEADF5425A9F5890029C386 /* Info.plist */,
+				DE24E57B25AA10D9000D9808 /* Views */,
 				DEEADF5125A9F5890029C386 /* Preview Content */,
 			);
 			path = "Example with SwiftUI";
