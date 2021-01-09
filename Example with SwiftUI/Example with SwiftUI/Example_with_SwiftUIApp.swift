@@ -9,6 +9,22 @@ import SwiftUI
 
 @main
 struct Example_with_SwiftUIApp: App {
+    init() {
+        // Take control of navigation bars
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithOpaqueBackground()
+        coloredAppearance.backgroundColor = .darkGray
+        coloredAppearance.titleTextAttributes = [
+            .foregroundColor: UIColor.white
+        ]
+        coloredAppearance.largeTitleTextAttributes = [
+            .foregroundColor: UIColor.white
+        ]
+
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+    }
+
     var body: some Scene {
         WindowGroup {
             MainView()
