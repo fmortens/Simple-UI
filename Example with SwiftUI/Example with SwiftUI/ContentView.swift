@@ -28,43 +28,57 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.gray.ignoresSafeArea()
-                ScrollView {VStack(alignment: .center, spacing: 10) {
-                Image("Background")
-                    .resizable()
-                    .frame(maxHeight: 200)
-                    .cornerRadius(10)
-                    .padding(.all, 20)
-                    Text(viewModel.currentText)
-                    .padding(.all, 20)
-                Divider()
-                HStack {
-                    Button("Større tekst") {
-                        // something
+
+                ScrollView {
+                    VStack(alignment: .center, spacing: 10) {
+                        Image("Background")
+                            .resizable()
+                            .frame(maxHeight: 200)
+                            .cornerRadius(10)
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 20)
+
+                        Text(viewModel.currentText)
+                            .onAppear {
+                                viewModel.pickRandomCurrentText()
+                            }
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 20)
+
+                        Divider()
+
+                        HStack {
+                            Button("Større tekst") {
+                                // something
+                            }
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 20)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+
+                            Spacer()
+
+                            Button("Bytt ut text") {
+                                viewModel.pickRandomCurrentText()
+                            }
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 20)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                        }
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 20)
+
+                        Divider()
+
+                        Spacer()
                     }
-                    .padding(.all, 20)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    Spacer()
-                    Button("Bytt ut text") {
-                        viewModel.pickRandomCurrentText()
-                    }
-                    .padding(.all, 20)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                }
-                .padding(.all, 20)
-                Divider()
-                Spacer()
-            }.background(Color.white)
-                }}
+
+            }
             .navigationBarTitle("Demo")
-                .onAppear {
-                    viewModel.pickRandomCurrentText()
-                }
+
         }
     }
 }
