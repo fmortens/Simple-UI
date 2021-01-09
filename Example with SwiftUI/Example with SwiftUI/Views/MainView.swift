@@ -30,25 +30,15 @@ struct MainView: View {
                         Divider()
 
                         HStack {
-                            Button("Større tekst") {
+                            SimpleButton(label: "Større tekst") {
                                 viewModel.increaseFontSize()
                             }
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 20)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
 
                             Spacer()
 
-                            Button("Bytt ut text") {
+                            SimpleButton(label: "Bytt ut text") {
                                 viewModel.pickRandomCurrentText()
                             }
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 20)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
                         }
 
                         Divider()
