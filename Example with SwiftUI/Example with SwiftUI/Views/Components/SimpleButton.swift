@@ -18,6 +18,7 @@ struct SimpleButton: View {
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(10)
+            .buttonStyle(PlainButtonStyle())
     }
 }
 
