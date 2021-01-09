@@ -9,8 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack(alignment: .center, spacing: 10) {
+                Image("Background").resizable()
+                Text("Lorem ipsum")
+                Divider()
+                HStack {
+                    Button("Større tekst") {
+                        // something
+                    }
+                    Spacer()
+                    Button("Bytt ut text") {
+                        // something else
+                    }
+                }
+                .padding()
+                Divider()
+                Spacer()
+            }
+            .navigationBarTitle("Demo")
+        }
     }
 }
 
