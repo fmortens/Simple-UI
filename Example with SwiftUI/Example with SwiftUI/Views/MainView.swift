@@ -27,14 +27,12 @@ struct MainView: View {
                     }
                     .padding(.vertical, 20)
 
-                HStack {
+                HStack(alignment: .center, spacing: 20) {
                     SimpleButton(label: "Større tekst") {
                         viewModel.increaseFontSize()
                     }
 
-                    Spacer()
-
-                    SimpleButton(label: "Bytt ut text") {
+                    SimpleButton(label: "Bytt ut tekst") {
                         viewModel.pickRandomCurrentText()
                     }
                 }
