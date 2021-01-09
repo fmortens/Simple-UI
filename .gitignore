@@ -1,2 +1,4 @@
-Example with SwiftUI/Example with SwiftUI.xcodeproj/project.xcworkspace/xcuserdata/fmortens.xcuserdatad/UserInterfaceState.xcuserstate
+xcuserdata/
 .DS_Store
+build/
+DerivedData/
