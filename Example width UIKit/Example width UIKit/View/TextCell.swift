@@ -11,4 +11,7 @@ class TextCell: UITableViewCell {
 
     @IBOutlet weak var cellTextLabel: UILabel!
 
+    func updateUI(fontSize: CGFloat) {
+        cellTextLabel.font = UIFont.systemFont(ofSize: fontSize)
+    }
 }

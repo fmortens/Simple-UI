@@ -44,17 +44,21 @@ extension ViewController {
             case 0:
                 let cell = demoTableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImageCell
                 cell.demoImageView.image = UIImage(named: viewModel.imageName)
+                
                 return cell
 
             case 1:
                 let cell = demoTableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
                 cell.cellTextLabel.text = viewModel.currentText
+                cell.updateUI(fontSize: viewModel.fontSize)
+
                 return cell
 
             case 2:
                 let cell = demoTableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
                 cell.delegate = self
                 cell.setupUI()
+
                 return cell
 
             default: fatalError("Unknown cell type!")
@@ -66,7 +70,9 @@ extension ViewController {
 
 extension ViewController: ButtonCellDelegate {
     func increaseTextSize() {
-        // nothing
+        viewModel?.increaseFontSize()
+
+        tableView.reloadData()
     }
 
     func pickText() {

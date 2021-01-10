@@ -5,7 +5,7 @@
 //  Created by Frank Mortensen on 10/01/2021.
 //
 
-import Foundation
+import UIKit
 
 class ViewModel {
 
@@ -16,6 +16,8 @@ class ViewModel {
         "Lorem ipsum dolor sit amet.",
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ]
+
+    var fontSize: CGFloat = 14.0
 
     var currentIndex: Int
 
@@ -35,5 +37,9 @@ class ViewModel {
         } else {
             pickRandomText()
         }
+    }
+
+    func increaseFontSize() {
+        fontSize += 1.0
     }
 }
