@@ -31,7 +31,7 @@ extension ViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,9 +45,34 @@ extension ViewController {
                 let cell = demoTableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImageCell
                 cell.demoImageView.image = UIImage(named: viewModel.imageName)
                 return cell
+
+            case 1:
+                let cell = demoTableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
+                cell.cellTextLabel.text = viewModel.currentText
+                return cell
+
+            case 2:
+                let cell = demoTableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
+                cell.delegate = self
+                cell.setupUI()
+                return cell
+
             default: fatalError("Unknown cell type!")
         }
 
+    }
+
+}
+
+extension ViewController: ButtonCellDelegate {
+    func increaseTextSize() {
+        // nothing
+    }
+
+    func pickText() {
+        viewModel?.pickRandomText()
+
+        tableView.reloadData()
     }
 
 }

@@ -28,7 +28,7 @@ class ViewModel {
     }
 
     func pickRandomText() {
-        let newIndex = Int.random(in: 0...availableTexts.count)
+        let newIndex = Int.random(in: 0...2)
 
         if newIndex != currentIndex {
             currentIndex = newIndex
