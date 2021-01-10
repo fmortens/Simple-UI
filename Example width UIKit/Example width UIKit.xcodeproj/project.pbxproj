@@ -13,6 +13,7 @@
 		DE23587125AA76880065655F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE23586F25AA76880065655F /* Main.storyboard */; };
 		DE23587325AA768A0065655F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE23587225AA768A0065655F /* Assets.xcassets */; };
 		DE23587625AA768A0065655F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE23587425AA768A0065655F /* LaunchScreen.storyboard */; };
+		DEB5C57525AB67E0008CCA9C /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB5C57425AB67E0008CCA9C /* ImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DE23587225AA768A0065655F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE23587525AA768A0065655F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE23587725AA768A0065655F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEB5C57425AB67E0008CCA9C /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		DE23586825AA76880065655F /* Example width UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DE23587725AA768A0065655F /* Info.plist */,
 				DE23586925AA76880065655F /* AppDelegate.swift */,
 				DE23586B25AA76880065655F /* SceneDelegate.swift */,
-				DE23586D25AA76880065655F /* ViewController.swift */,
-				DE23586F25AA76880065655F /* Main.storyboard */,
 				DE23587225AA768A0065655F /* Assets.xcassets */,
-				DE23587425AA768A0065655F /* LaunchScreen.storyboard */,
-				DE23587725AA768A0065655F /* Info.plist */,
+				DEB5C56625AB6093008CCA9C /* View */,
+				DEB5C56725AB60AF008CCA9C /* Controller */,
 			);
 			path = "Example width UIKit";
+			sourceTree = "<group>";
+		};
+		DEB5C56625AB6093008CCA9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE23587425AA768A0065655F /* LaunchScreen.storyboard */,
+				DE23586F25AA76880065655F /* Main.storyboard */,
+				DEB5C57425AB67E0008CCA9C /* ImageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEB5C56725AB60AF008CCA9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE23586D25AA76880065655F /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE23586E25AA76880065655F /* ViewController.swift in Sources */,
+				DEB5C57525AB67E0008CCA9C /* ImageCell.swift in Sources */,
 				DE23586A25AA76880065655F /* AppDelegate.swift in Sources */,
 				DE23586C25AA76880065655F /* SceneDelegate.swift in Sources */,
 			);
