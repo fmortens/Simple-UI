@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let coloredAppearance = UINavigationBarAppearance()
         coloredAppearance.configureWithOpaqueBackground()
-        coloredAppearance.backgroundColor = .systemPink
+        coloredAppearance.backgroundColor = .darkGray
         coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
 
