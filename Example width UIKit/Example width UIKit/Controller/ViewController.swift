@@ -19,6 +19,8 @@ class ViewController: UITableViewController {
         viewModel = ViewModel()
 
         demoTableView.delegate = self
+
+        demoTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
 
 }
