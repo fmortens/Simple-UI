@@ -18,14 +18,14 @@ struct MainView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(maxHeight: 200)
                     .cornerRadius(10)
-                    .padding(.vertical, 20)
+                    .padding(.vertical, 10)
 
                 Text(viewModel.currentText)
                     .font(.system(size: viewModel.fontSize))
                     .onAppear {
                         viewModel.pickRandomCurrentText()
                     }
-                    .padding(.vertical, 20)
+                    .padding(.vertical, 10)
 
                 HStack(alignment: .center, spacing: 20) {
                     SimpleButton(label: "Større tekst") {
@@ -36,9 +36,9 @@ struct MainView: View {
                         viewModel.pickRandomCurrentText()
                     }
                 }
-                .padding(.vertical, 20)
+                .padding(.vertical, 10)
             }
-            .padding(.vertical, 20)
+            .padding(.vertical, 8)
             .navigationBarTitleDisplayMode(.large)
             .navigationBarTitle("Demo")
         }
