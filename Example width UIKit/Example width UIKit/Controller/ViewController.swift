@@ -44,6 +44,7 @@ extension ViewController {
             case 0:
                 let cell = demoTableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImageCell
                 cell.demoImageView.image = UIImage(named: viewModel.imageName)
+                cell.updateUI(cornerRadius: 10)
                 
                 return cell
 

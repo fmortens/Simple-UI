@@ -11,4 +11,7 @@ class ImageCell: UITableViewCell {
 
     @IBOutlet weak var demoImageView: UIImageView!
 
+    func updateUI(cornerRadius: CGFloat) {
+        demoImageView.layer.cornerRadius = cornerRadius
+    }
 }
