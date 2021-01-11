@@ -17,7 +17,7 @@ class ViewModel {
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ]
 
-    var fontSize: CGFloat = 14.0
+    var fontSize: CGFloat = 16.0
 
     var currentIndex: Int
 
